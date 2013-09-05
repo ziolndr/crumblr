@@ -1,5 +1,4 @@
-<h1>Welcome</h1>
-<p>Welcome to the crumblr blog.</p>
-<p>
-	Placeholder page.
-</p>
+ <% @posts.each do |post| %>
+ <%= render 'posts/post', post: post %>
+ <br><br><br><br>
+ <%end%>

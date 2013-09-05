@@ -36,15 +36,13 @@ class PostsController < ApplicationController
         redirect_to @post, notice: 'Post was successfully updated.'
       else
         render action: 'edit'
+      end
     end
-  end
 
   # DELETE /posts/1
   def destroy
     @post.destroy
     redirect_to posts_url
-
-    end
   end
 
   private
@@ -57,4 +55,4 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :content)
     end
-end
+  end
