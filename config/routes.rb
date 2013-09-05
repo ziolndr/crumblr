@@ -1,4 +1,6 @@
 Crumblr::Application.routes.draw do
+  resources :posts
+
   get "about" => "pages#action"
   root "pages#welcome"
 
